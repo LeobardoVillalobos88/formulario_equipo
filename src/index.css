@@ -1,4 +1,4 @@
-:root {
+:root { 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +65,56 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.container {
+  background: #282c34;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  width: 300px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  background: #3a3f47;
+  color: white;
+  font-size: 14px;
+}
+
+input[type="submit"], button {
+  background: #8C2475;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input[type="submit"]:hover, button:hover {
+  background: #a03c8c;
+}
+
+p {
+  color: red;
+  font-size: 12px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

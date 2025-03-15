@@ -1,15 +1,15 @@
-import { useState } from 'react'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom'; // 🔥 No usar BrowserRouter aquí
+import Form from './components/Form';
+import Login from './components/Login';
+import Dashboard from './components/Dashboard';
 
-import './App.css'
-import Form from './components/Form'
-
-function App() {
-
+export default function App() {
   return (
-    <>
-      <Form/>
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<Form />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+    </Routes>
+  );
 }
-
-export default App
