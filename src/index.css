@@ -3,9 +3,9 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color-scheme: dark;
+  color: white;
+  background-color: #121212;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,81 +15,79 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  color: #fff;
+  text-decoration: none;
 }
 a:hover {
-  color: #535bf2;
+  color: #ccc;
 }
 
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #121212;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+h1, h2 {
+  text-align: center;
+  color: white;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  border-radius: 5px;
+  border: 1px solid white;
+  padding: 10px;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: white;
+  color: black;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: all 0.3s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button:hover {
+  background: #ccc;
+  border-color: #ccc;
+}
+
+button:focus,
+button:focus-visible {
+  outline: none;
 }
 
 .container {
-  background: #282c34;
+  background: #1e1e1e;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-  width: 300px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  width: 320px;
   text-align: center;
+  border: 1px solid #333;
 }
 
 input {
   width: 100%;
   padding: 10px;
   margin: 8px 0;
-  border: none;
+  border: 1px solid #444;
   border-radius: 5px;
-  background: #3a3f47;
+  background: #222;
   color: white;
   font-size: 14px;
 }
 
+input::placeholder {
+  color: #bbb;
+}
+
 input[type="submit"], button {
-  background: #8C2475;
-  color: white;
+  background: white;
+  color: black;
   cursor: pointer;
   font-weight: bold;
   border: none;
@@ -99,18 +97,14 @@ input[type="submit"], button {
 }
 
 input[type="submit"]:hover, button:hover {
-  background: #a03c8c;
+  background: #ccc;
+  color: black;
 }
 
 p {
-  color: red;
+  color: white;
   font-size: 12px;
   margin: 0;
-}
-
-h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
 }
 
 form {
