@@ -2,15 +2,18 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useNavigate } from 'react-router-dom';
 
 export default function Form() {
+  const navigate = useNavigate();
+
   const schema = yup.object().shape({
     name: yup.string().required("El nombre es requerido"),
     surname: yup.string().required("El apellido es requerido"),
     age: yup.number().integer("Debe ser entero").min(18, "Mínimo 18 años").required()
       .typeError("Debe ser un número"),
     phone: yup.string().required("El teléfono es requerido"),
-    pass: yup.string().required("Contraseña requerida").min(6, "Minimo 6 caracteres").max(10, "Maximo 10 caracteres"),
+    pass: yup.string().required("Contraseña requerida").min(6, "Mínimo 6 caracteres").max(10, "Máximo 10 caracteres"),
     confirmPass: yup.string().oneOf([yup.ref('pass'), null], "Las contraseñas deben coincidir"),
   });
 
@@ -19,7 +22,8 @@ export default function Form() {
   });
 
   function onSubmit(data) {
-    console.log("Datos:", data);
+    console.log("Registrando usuario:", data);
+    navigate("/login", { state: data });
   }
 
   return (
@@ -43,7 +47,7 @@ export default function Form() {
         <input type="password" placeholder='Confirmar contraseña' {...register('confirmPass')} />
         <p>{errors.confirmPass?.message}</p>
 
-        <input type="submit" />
+        <input type="submit" value="Registrarse" />
       </form>
     </div>
   );
